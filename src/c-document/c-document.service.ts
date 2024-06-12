@@ -33,7 +33,7 @@ export class CDocumentService {
     }
 
     async getAllDocuments(): Promise<CDocument[]> {
-        return this.documentModel.find().exec();
+        return this.documentModel.find() .populate('uploadedBy', '_id fullName') .exec();
     }
 
     async uploadFileToS3(document: Express.Multer.File): Promise<string> {
