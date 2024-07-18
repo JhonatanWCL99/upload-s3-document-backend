@@ -59,6 +59,8 @@ export class CDocumentService {
             Key: `${Date.now().toString()}_${document.originalname}`,
             Body: document.buffer,
             ACL: 'public-read',
+            ContentType: document.mimetype,  // Ensure proper content type is set
+            ContentDisposition: 'inline',   // Optional: Ensure inline display
         };
 
         const data = await this.s3.upload(params).promise();
