@@ -1,4 +1,6 @@
-# Proyecto Backend NestJS
+# Aplicación Backend NestJS par subir archivos a S3 AWS
+
+Aplicación para la subida de archivos en bucket S3 de AWS, tambien tiene las funcionalidades para registrar usuarios, como tambien para listado de archivos y usuarios.
 
 ## Instrucciones de instalación, configuración y despliegue
 
